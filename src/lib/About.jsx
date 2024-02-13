@@ -64,7 +64,7 @@ const About = ({}) => {
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Sapiente, quisquam dolores. Voluptatem animi cupiditate
                     ipsum laborum aperiam totam fugiat rem sit omnis tempora,
-                    est quasi magnam corporis molestias delectus veniam!
+                    est quasi magnam corporis molestias delectus veniam 2020!
                   </p>
                 </div>
               </div>

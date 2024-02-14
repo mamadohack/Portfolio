@@ -1,17 +1,29 @@
 "use client";
-import { useState, useEffect,useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 // style={{ backgroundColor: "#ebd400" }}
 const NavBar = ({}) => {
-
-  const [showNavbar ,setShowNavbar]=useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
+  const [colorNavbar, setColorNavbar] = useState("transparent");
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY >= 50 && colorNavbar === "transparent") {
+        setColorNavbar("#ebd400"); //#ebd400
+      } else if (scrollY < 50 && colorNavbar === "#ebd400") {
+        setColorNavbar("transparent");
+      }
+    });
+  }, [colorNavbar]);
 
   return (
     <nav className=" border-gray-200 fixed top-5 left-0 right-0 h-[73px] z-[25] ">
       <div className="px-5 ">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 rounded-lg bg-gray-900">
+        <div
+          className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 rounded-lg"
+          style={{ backgroundColor: colorNavbar }}
+        >
           <a
             href="https://flowbite.com/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -65,7 +77,10 @@ const NavBar = ({}) => {
             } w-full md:block md:w-auto`}
             id="navbar-default"
           >
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4  border-t-0 border-white rounded-b-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-900 md:dark:bg-gray-900 ">
+            <ul
+              className="font-medium flex flex-col p-4 md:p-0 mt-4  border-t-0 border-white rounded-b-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-[#101820] md:bg-transparent
+            "
+            >
               <li>
                 <a
                   href="#"

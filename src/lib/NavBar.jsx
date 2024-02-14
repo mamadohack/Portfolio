@@ -25,7 +25,7 @@ const NavBar = ({}) => {
           style={{ backgroundColor: colorNavbar }}
         >
           <a
-            href="https://flowbite.com/"
+            href="#"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             {/* <img
@@ -40,7 +40,7 @@ const NavBar = ({}) => {
               height={32}
               alt="Flowbite Logo"
             /> */}
-            <span className="self-center text-4xl font-semibold whitespace-nowrap dark:text-white font-sans tracking-widest">
+            <span className="self-center text-4xl font-semibold whitespace-nowrap text-white font-sans tracking-widest">
               First
             </span>
           </a>

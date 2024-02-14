@@ -74,7 +74,7 @@ const About = ({}) => {
       </section>
       <section className="min-h-screen flex justify-center items-center mb-20">
         <div className="container">
-          <div className="flex flex-wrap px-8 lg:px-14 font-sans">
+          <div className="flex flex-wrap px-2 lg:px-14 font-sans">
             <div className="w-full lg:w-1/2 border-2  rounded-[15px]">
               <h3 className="font-sans sm:text-3xl text-xl font-bold border-b-2 md:p-5 p-3">
                 Information
@@ -83,7 +83,7 @@ const About = ({}) => {
                 <span className="min-w-[140px] p-3 selection:bg-black text-xl font-semibold text-[#ebd400] inline-block border-r-2">
                   Name
                 </span>
-                <span className="ml-5 text-xl text-[#717275]">
+                <span className="ml-5 sm:text-xl text-[#717275]">
                   Kermadi Mohammed
                 </span>
               </p>
@@ -91,7 +91,7 @@ const About = ({}) => {
                 <span className="min-w-[140px] p-3  text-xl font-semibold text-[#ebd400] inline-block border-r-2">
                   Birthday
                 </span>
-                <span className="ml-5 text-xl text-[#717275]">
+                <span className="ml-5 sm:text-xl text-[#717275]">
                   March 30, 1998
                 </span>
               </p>
@@ -99,7 +99,7 @@ const About = ({}) => {
                 <span className="min-w-[140px] p-3  text-xl font-semibold text-[#ebd400] inline-block border-r-2">
                   Phone
                 </span>
-                <span className="ml-5 text-xl text-[#717275]">
+                <span className="ml-5 sm:text-xl text-[#717275]">
                   <Link href="tel: +213698966328">06 98 96 63 28</Link>
                 </span>
               </p>
@@ -107,9 +107,9 @@ const About = ({}) => {
                 <span className="min-w-[140px] p-3 text-xl font-semibold text-[#ebd400] inline-block border-r-2">
                   Email
                 </span>
-                <span className="ml-5 text-xl text-[#717275]">
+                <span className="ml-5 sm:text-xl text-[#717275]">
                   <Link href="mailto:kermadimohamed7@gmail.com">
-                    kermadimohamed7@gmail.com
+                    kermadimohamed7
                   </Link>
                 </span>
               </p>

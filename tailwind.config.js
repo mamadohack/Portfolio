@@ -8,6 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+
+        // Complex site-specific column configuration
+        'footer1': '1fr 1fr 2fr',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

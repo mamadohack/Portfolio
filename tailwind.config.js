@@ -8,10 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      gridTemplateColumns: {
+      gridTemplateRows: {
 
         // Complex site-specific column configuration
-        'footer1': '60px 85px 1fr 20px',
+        'footer1': '55px 80px 80px 150px 50px',
+        'footer2': '55px 80px 150px 50px',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

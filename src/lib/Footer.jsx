@@ -10,10 +10,10 @@ import { FaGoogle } from "react-icons/fa";
 const Footer = ({}) => {
   return (
     <section className="min-h-screen">
-      <div className="container mx-auto">
-        <div className="grid lg:grid-cols-4 grid-cols-2 md:gap-5 px-[30px]">
-          <div className="grid grid-cols-subgrid col-span-2 gap-2">
-            <div className=" font-sans border-r col-span-2 md:col-span-1">
+      <div className="container mx-auto mt-10">
+        <div className="grid lg:grid-cols-8 grid-cols-2 md:gap-5 px-[30px]">
+          <div className="grid grid-cols-subgrid col-span-2 gap-2 lg:col-span-4 gap-5">
+            <div className=" font-sans lg:border-r col-span-2 md:col-span-1 lg:col-span-2">
               <h3 className="font-semibold text-sm">SERVICES</h3>
               <ul className="mt-2">
                 <li className="inline-block">
@@ -77,7 +77,7 @@ const Footer = ({}) => {
                 I’m available for freelance projects
               </p>
             </div>
-            <div className=" col-span-2 md:col-span-1">
+            <div className=" col-span-2 md:col-span-1 lg:col-span-2">
               <h3 className="font-semibold text-sm">START A PROJECT</h3>
               <p className="mt-5 text-gray-500">
                 I’m available for freelance projects
@@ -94,8 +94,8 @@ const Footer = ({}) => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-subgrid col-span-2 gap-5">
-            <div className="">
+          <div className="grid grid-cols-subgrid col-span-2 gap-5 grid-rows-footer1 lg:grid-rows-footer2 lg:col-span-4 lg:mt-0 mt-10 mb-10">
+            <div className="lg:col-span-2">
               <input
                 type="name"
                 name="name"
@@ -104,7 +104,7 @@ const Footer = ({}) => {
                 className=" w-full outline-none focus:border-yellow-500 duration-200 border-2 rounded p-2 h-full text-gray-500"
               />
             </div>
-            <div className="">
+            <div className="lg:col-span-2">
               <input
                 type="email"
                 name="email"
@@ -131,8 +131,8 @@ const Footer = ({}) => {
             <div className="relative">
               <input
                 type="checkbox"
-                name="Website"
-                id="website"
+                name="Branding"
+                id="Branding"
                 className="inline-block w-full h-full bg-transparent appearance-none checked:border-yellow-500 duration-200 border-2 rounded"
               />
               <label
@@ -172,6 +172,25 @@ const Footer = ({}) => {
                 <FaGoogle className="text-center mx-auto mb-1 text-yellow-500" />
                 <span className="text-gray-500">SEO</span>
               </label>
+            </div>
+            <div className="col-span-2 lg:col-span-4 ">
+              <input
+                type="tellme"
+                name="tellme"
+                id="tellme"
+                placeholder="tell me about the project"
+                className=" w-full outline-none focus:border-yellow-500 duration-200 border-2 rounded p-2 h-full text-gray-500"
+              />
+            </div>
+            <div className="col-span-2 lg:col-start-4">
+              <button
+                type="button"
+                name="btn"
+                id="btn"
+                className=" w-full outline-none bg-yellow-500 hover:bg-gray-700 text-white text-xl font-bold py-1 duration-200 border-2 rounded-full p-2 h-full"
+              >
+                Send
+              </button>
             </div>
           </div>
         </div>

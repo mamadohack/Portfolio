@@ -11,7 +11,7 @@ module.exports = {
       gridTemplateColumns: {
 
         // Complex site-specific column configuration
-        'footer1': '1fr 1fr 2fr',
+        'footer1': '60px 85px 1fr 20px',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -9,9 +9,9 @@ import Link from "next/link";
 const Projects = ({}) => {
   return (
     <section className="min-h-screen py-10">
-      <div className="container mx-auto lg:px-10">
-        <div className="flex items-center bg-gray-900 gap-5 sm:justify-end p-5 mx-auto sm:ml-auto sm:mx-0 max-w-lg rounded-xl min-w-96 justify-center">
-          <div className="relative h-[160px] w-[160px]">
+      <div className="container mx-auto lg:px-10 px-2">
+        <div className="flex items-center bg-gray-900 gap-5 sm:justify-end p-5 mx-auto sm:ml-auto sm:mx-0 max-w-lg rounded-xl  justify-center sm:flex-row flex-col">
+          <div className="relative h-[160px] w-[160px] ">
             <Image
               src={ImgDesk}
               fill
@@ -19,7 +19,10 @@ const Projects = ({}) => {
               alt="white desk"
             ></Image>
           </div>
-          <h2 className={`text-3xl font-bold text-white`}> Projects</h2>
+          <h2 className={`sm:text-3xl font-bold text-white text-xl`}>
+            {" "}
+            Projects
+          </h2>
         </div>
         <div className="lg:grid-cols-3 md:grid-cols-2 grid-cols-1 grid font-sans gap-5 mt-10 px-10">
           <div className="p-10 border-2 border-transparent rounded-xl hover:border-[#ebd400] duration-500 ease-in-out overflow-hidden group">

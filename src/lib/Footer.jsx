@@ -11,7 +11,7 @@ const Footer = ({}) => {
   return (
     <section className="min-h-screen">
       <div className="container mx-auto mt-10">
-        <div className="grid lg:grid-cols-8 grid-cols-2 md:gap-5 px-[30px]">
+        <div className="grid lg:grid-cols-8 grid-cols-2 md:gap-5 px-[30px] ">
           <div className="grid grid-cols-subgrid col-span-2 gap-2 lg:col-span-4 gap-5">
             <div className=" font-sans lg:border-r col-span-2 md:col-span-1 lg:col-span-2">
               <h3 className="font-semibold text-sm">SERVICES</h3>
@@ -77,7 +77,7 @@ const Footer = ({}) => {
                 I’m available for freelance projects
               </p>
             </div>
-            <div className=" col-span-2 md:col-span-1 lg:col-span-2">
+            <div className=" col-span-2 md:col-span-1 lg:col-span-2 md:border-none border-t-2 pt-5 md:pt-0">
               <h3 className="font-semibold text-sm">START A PROJECT</h3>
               <p className="mt-5 text-gray-500">
                 I’m available for freelance projects
@@ -85,7 +85,7 @@ const Footer = ({}) => {
               <h3 className="font-semibold text-sm mt-10">EMAIL</h3>
               <p className="mt-5 text-gray-500">
                 <Link href="mailto:kermadimohamed7@gmail.com">
-                  kermadimohamed7@gmail.com
+                  kermadimohamed7@gmail
                 </Link>
               </p>
               <h3 className="font-semibold text-sm mt-10">CALL</h3>
@@ -174,13 +174,13 @@ const Footer = ({}) => {
               </label>
             </div>
             <div className="col-span-2 lg:col-span-4 ">
-              <input
+              <textarea
                 type="tellme"
                 name="tellme"
                 id="tellme"
                 placeholder="tell me about the project"
-                className=" w-full outline-none focus:border-yellow-500 duration-200 border-2 rounded p-2 h-full text-gray-500"
-              />
+                className=" w-full outline-none focus:border-yellow-500 duration-200 border-2 rounded p-3 h-full text-gray-500 overflow-y-auto"
+              ></textarea>
             </div>
             <div className="col-span-2 lg:col-start-4">
               <button

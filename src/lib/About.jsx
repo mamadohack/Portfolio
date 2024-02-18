@@ -8,7 +8,6 @@ import { Lalezar } from "next/font/google";
 const lalezar = Lalezar({ subsets: ["arabic"],weight:["400"] })
 
 const About = ({}) => {
-    const t = useTranslations("Index");
     const local = useLocale();
     console.log(local)
 
@@ -64,7 +63,7 @@ const About = ({}) => {
                       local === "ar" && lalezar.className
                     } ${local === "ar" && 'text-right'} `}
                   >
-                   {t("title")}
+                    
                   </h2>
                   <p className="text-[#717275] text-lg/6 text-pretty">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem

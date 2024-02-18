@@ -82,13 +82,14 @@ const NavBar = ({}) => {
             "
             >
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="ar"
+                  locale="ar"
                   className="block py-2 px-3 text-white bg-blue-900 rounded md:bg-transparent md:p-0 text-white hover:text-blue-700"
                   aria-current="page"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
                 <a

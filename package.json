@@ -11,9 +11,12 @@
   "dependencies": {
     "framer-motion": "^11.0.3",
     "next": "14.1.0",
+    "next-i18next": "^15.2.0",
+    "next-intl": "^3.7.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
+    "react-intl": "^6.6.2",
     "sharp": "^0.33.2"
   },
   "devDependencies": {

@@ -1,9 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import imgPerson from "../../public/1000.jpg";
+import { useTranslations, useLocale } from "next-intl";
+import { lalezar } from "@/app/[locale]/layout";
+
 
 
 const HomeApp = ({}) => {
+  const t = useTranslations("Homepage");
   return (
     <section
       className="lg:min-h-screen relative overflow-hidden flex justify-center items-center min-h-[960px]"
@@ -31,12 +35,12 @@ const HomeApp = ({}) => {
                 ></Image> */}
                 </div>
                 <h3
-                  className=" font-sans font-bold ml-5 bg-white px-3 py-1 rounded-full md:text-3xl text-2xl"
+                  className=" font-bold ml-5 bg-white px-3 py-1 rounded-full md:text-3xl text-2xl"
                   style={{
                     color: "#212529",
                   }}
                 >
-                  Hello Guys!
+                  {t("title")}
                 </h3>
               </div>
               <h3
@@ -45,11 +49,11 @@ const HomeApp = ({}) => {
                   color: "#FEE715",
                 }}
               >
-                I’m available for freelance work.
+                {t("title-discription")}
               </h3>
               <Link href="#" className="">
                 <h3 className="px-5 py-3 rounded-full font-sans cursor-pointer text-white max-w-max	font-semibold x md:text-xl ">
-                  Let&apos;s Begin
+                  {t("title-button")}
                 </h3>
               </Link>
             </div>

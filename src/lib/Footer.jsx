@@ -9,8 +9,8 @@ import { RiSmartphoneLine } from "react-icons/ri";
 import { FaGoogle } from "react-icons/fa";
 const Footer = ({}) => {
   return (
-    <section className="min-h-screen">
-      <div className="container mx-auto mt-10">
+    <section className="min-h-screen relative">
+      <div className="container mx-auto mt-10 ">
         <div className="grid lg:grid-cols-8 grid-cols-2 md:gap-5 px-[30px] ">
           <div className="grid grid-cols-subgrid col-span-2 gap-2 lg:col-span-4 gap-5">
             <div className=" font-sans lg:border-r col-span-2 md:col-span-1 lg:col-span-2">
@@ -194,6 +194,9 @@ const Footer = ({}) => {
             </div>
           </div>
         </div>
+        <h3 className="text-center absolute bottom-0  left-0 right-0">
+          Copyright © 2024 K.M Company. All rights reserved.
+        </h3>
       </div>
     </section>
   );

@@ -4,6 +4,7 @@ import About from "@/lib/About";
 import Projects from "@/lib/Projects";
 import Footer from "@/lib/Footer";
 export default function Home() {
+
   return (
     <div>
       <NavBar></NavBar>

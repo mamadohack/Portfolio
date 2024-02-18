@@ -2,8 +2,16 @@ import Image from "next/image";
 import img1 from "../../public/couple-working-from-home-together-sofa.jpg";
 import Link from "next/link";
 import imgPerson from "../../public/1000.jpg";
+import { useTranslations,useLocale } from "next-intl";
+import { Lalezar } from "next/font/google";
+
+const lalezar = Lalezar({ subsets: ["arabic"],weight:["400"] })
 
 const About = ({}) => {
+    const t = useTranslations("Index");
+    const local = useLocale();
+    console.log(local)
+
   return (
     <>
       <section
@@ -51,8 +59,12 @@ const About = ({}) => {
                 </div>
 
                 <div>
-                  <h2 className="my-5 text-2xl font-bold font-sans">
-                    a little bit about Joshua
+                  <h2
+                    className={`my-5 text-2xl font-bold font-sans ${
+                      local === "ar" && lalezar.className
+                    } ${local === "ar" && 'text-right'} `}
+                  >
+                   {t("title")}
                   </h2>
                   <p className="text-[#717275] text-lg/6 text-pretty">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem

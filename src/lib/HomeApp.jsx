@@ -1,12 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import imgPerson from "../../public/1000.jpg";
-import { useTranslations, useLocale } from "next-intl";
-import { lalezar } from "@/app/[locale]/layout";
+import { useTranslations } from "next-intl";
 
 
 
-const HomeApp = ({}) => {
+const HomeApp = ({params}) => {
   const t = useTranslations("Homepage");
   return (
     <section
@@ -35,7 +34,7 @@ const HomeApp = ({}) => {
                 ></Image> */}
                 </div>
                 <h3
-                  className=" font-bold ml-5 bg-white px-3 py-1 rounded-full md:text-3xl text-2xl"
+                  className=" font-bold ml-5 bg-white px-3 py-1 rounded-full md:text-3xl text-2xl  lalezar-regular"
                   style={{
                     color: "#212529",
                   }}
@@ -44,7 +43,7 @@ const HomeApp = ({}) => {
                 </h3>
               </div>
               <h3
-                className="bg-white px-5 md:py-2 py-1 rounded-full font-bold font-sans mb-4 max-w-max md:text-4xl text-2xl"
+                className="bg-white px-5 md:py-2 py-1 rounded-full font-bold mb-4 max-w-max md:text-4xl text-2xl"
                 style={{
                   color: "#FEE715",
                 }}
@@ -52,7 +51,7 @@ const HomeApp = ({}) => {
                 {t("title-discription")}
               </h3>
               <Link href="#" className="">
-                <h3 className="px-5 py-3 rounded-full font-sans cursor-pointer text-white max-w-max	font-semibold x md:text-xl ">
+                <h3 className="px-5 py-3 rounded-full cursor-pointer text-white max-w-max	font-semibold x md:text-xl ">
                   {t("title-button")}
                 </h3>
               </Link>

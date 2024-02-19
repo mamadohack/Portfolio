@@ -14,9 +14,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children, params }) {
+  const lango = params.locale === "en" ? "ltr" : "rtl";
   return (
     <html lang={params.locale}>
-      <body className={params.locale === "en" ? roboto.className:lalezar.className}>
+      <body dir={lango}>
         {children}</body>
     </html>
   );

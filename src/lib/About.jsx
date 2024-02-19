@@ -35,7 +35,7 @@ const About = ({}) => {
                 className="block rounded-[20px] w-full h-auto"
               ></Image>
             </div>
-            <div className="w-full lg:w-1/2 mt-8 lg:mt-0 pl-0 lg:pl-10 font-sans">
+            <div className="w-full lg:w-1/2 mt-8 lg:mt-0 pl-0 lg:pl-10 font-sans lg:rtl:pr-10 lg:rtl:pl-0">
               <div>
                 <div className="flex items-center bg-[#ebd400] justify-end xl:justify-between gap-5 rounded-[15px] font-sans">
                   <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white ml-10 font-bold lg:max-w-min max-w-max">
@@ -61,11 +61,9 @@ const About = ({}) => {
                   <h2
                     className={`my-5 text-2xl font-bold font-sans ${
                       local === "ar" && lalezar.className
-                    } ${local === "ar" && 'text-right'} `}
-                  >
-                    
-                  </h2>
-                  <p className="text-[#717275] text-lg/6 text-pretty">
+                    } ${local === "ar" && "text-right"} `}
+                  ></h2>
+                  <p className="text-[#717275] text-lg/6 text-pretty ">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
                     nostrum, voluptatum corporis hic exercitationem cupiditate
                     quia et enim corrupti blanditiis, beatae aperiam iure magni

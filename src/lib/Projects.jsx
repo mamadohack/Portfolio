@@ -12,7 +12,7 @@ const Projects = ({}) => {
     const t = useTranslations("Projects");
 
   return (
-    <section className="min-h-screen py-10">
+    <section className="min-h-screen py-10" id="Projects">
       <div className="container mx-auto lg:px-10 px-5">
         <div className="rtl:flex-row-reverse flex items-center bg-gray-900 gap-5 sm:justify-end p-5 mx-auto sm:ml-auto sm:mx-0 max-w-lg rounded-xl  justify-center sm:flex-row flex-col">
           <div className="relative h-[160px] w-[160px] ">

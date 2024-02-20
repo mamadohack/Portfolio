@@ -12,7 +12,7 @@ import { useTranslations } from "next-intl";
 const Footer = ({}) => {
     const t = useTranslations("Footer");
   return (
-    <section className="min-h-screen relative">
+    <section className="min-h-screen relative mb-2"id="Footer">
       <div className="container mx-auto mt-10 px-8 lg:px-0">
         <div className="grid lg:grid-cols-8 grid-cols-2 md:gap-5 px-[30px] ">
           <div className="grid grid-cols-subgrid col-span-2 gap-2 lg:col-span-4 gap-5">

@@ -7,50 +7,57 @@ import { FaGlobe } from "react-icons/fa6";
 import { FaRegLightbulb } from "react-icons/fa6";
 import { RiSmartphoneLine } from "react-icons/ri";
 import { FaGoogle } from "react-icons/fa";
+import { useTranslations } from "next-intl";
+
 const Footer = ({}) => {
+    const t = useTranslations("Footer");
   return (
     <section className="min-h-screen relative">
-      <div className="container mx-auto mt-10 ">
+      <div className="container mx-auto mt-10 px-8 lg:px-0">
         <div className="grid lg:grid-cols-8 grid-cols-2 md:gap-5 px-[30px] ">
           <div className="grid grid-cols-subgrid col-span-2 gap-2 lg:col-span-4 gap-5">
             <div className=" font-sans lg:border-r col-span-2 md:col-span-1 lg:col-span-2">
-              <h3 className="font-semibold text-sm">SERVICES</h3>
+              <h3 className="font-semibold text-sm rtl:text-3xl">
+                {t("SERVICES")}
+              </h3>
               <ul className="mt-2">
                 <li className="inline-block">
                   <Link
                     href="#"
-                    className="mr-3 mt-2 inline-block min-w-[70px] border border-gray duration-200 hover:bg-[#101820] hover:text-white p-1 px-2 rounded-full text-sm text-[#717275] "
+                    className="mr-3 mt-2 inline-block min-w-[70px] border border-gray duration-200 hover:bg-[#101820] hover:text-white p-1 px-2 rounded-full text-sm text-[#717275] rtl:text-xl"
                   >
-                    Websites
+                    {t("Websites")}
                   </Link>
                 </li>
                 <li className="inline-block">
                   <Link
                     href="#"
-                    className="mr-3 mt-2 inline-block min-w-[70px] border border-gray duration-200 hover:bg-[#101820] hover:text-white p-1 px-2 rounded-full text-sm text-[#717275] "
+                    className="mr-3 mt-2 inline-block min-w-[70px] border border-gray duration-200 hover:bg-[#101820] hover:text-white p-1 px-2 rounded-full text-sm text-[#717275] rtl:text-xl"
                   >
-                    Branding
+                    {t("Branding")}
                   </Link>
                 </li>
                 <li className="inline-block">
                   <Link
                     href="#"
-                    className="mr-3 mt-2 inline-block min-w-[70px] border border-gray duration-200 hover:bg-[#101820] hover:text-white p-1 px-2 rounded-full text-sm text-[#717275] "
+                    className="mr-3 mt-2 inline-block min-w-[70px] border border-gray duration-200 hover:bg-[#101820] hover:text-white p-1 px-2 rounded-full text-sm text-[#717275] rtl:text-xl"
                   >
-                    Ecommerce
+                    {t("Ecommerce")}
                   </Link>
                 </li>
                 <li className="inline-block">
                   <Link
                     href="#"
-                    className="text-center mt-2 inline-block min-w-[70px] border border-gray-300 duration-200 hover:bg-[#101820] hover:text-white p-1 px-2 rounded-full text-sm text-[#717275] "
+                    className="text-center mt-2 inline-block min-w-[70px] border border-gray-300 duration-200 hover:bg-[#101820] hover:text-white p-1 px-2 rounded-full text-sm text-[#717275] rtl:text-xl"
                   >
-                    SEO
+                    {t("SEO")}
                   </Link>
                 </li>
               </ul>
-              <h3 className="font-semibold text-sm mt-5">STAY CONNECTED</h3>
-              <ul className="mt-5 space-x-2 text-lg">
+              <h3 className="font-semibold text-sm mt-5 rtl:text-3xl">
+                {t("STAY CONNECTED")}
+              </h3>
+              <ul className="mt-5 space-x-2 text-lg rtl:text-2xl">
                 <li className="inline-block p-2 rounded-full border border-gray-300 hover:text-white hover:bg-[#101820] duration-200">
                   <Link href="#">
                     <FaXTwitter />
@@ -72,25 +79,35 @@ const Footer = ({}) => {
                   </Link>
                 </li>
               </ul>
-              <h3 className="font-semibold text-sm mt-5">START A PROJECT</h3>
-              <p className="mt-5 text-gray-500">
-                I’m available for freelance projects
+              <h3 className="font-semibold text-sm mt-5 rtl:text-3xl">
+                {t("START A PROJECT")}
+              </h3>
+              <p className="mt-5 text-gray-500 rtl:text-xl">
+                {t("I’m available for freelance projects")}
               </p>
             </div>
             <div className=" col-span-2 md:col-span-1 lg:col-span-2 md:border-none border-t-2 pt-5 md:pt-0">
-              <h3 className="font-semibold text-sm">START A PROJECT</h3>
-              <p className="mt-5 text-gray-500">
-                I’m available for freelance projects
+              <h3 className="font-semibold text-sm rtl:text-3xl">
+                {t("START A PROJECT")}
+              </h3>
+              <p className="mt-5 text-gray-500 rtl:text-xl">
+                {t("I’m available for freelance projects")}
               </p>
-              <h3 className="font-semibold text-sm mt-10">EMAIL</h3>
-              <p className="mt-5 text-gray-500">
+              <h3 className="font-semibold text-sm mt-10 rtl:text-3xl ">
+                {t("EMAIL")}
+              </h3>
+              <p className="mt-5 text-gray-500 rtl:text-xl">
                 <Link href="mailto:kermadimohamed7@gmail.com">
                   kermadimohamed7@gmail
                 </Link>
               </p>
-              <h3 className="font-semibold text-sm mt-10">CALL</h3>
+              <h3 className="font-semibold text-sm mt-10 rtl:text-3xl">
+                {t("CALL")}
+              </h3>
               <p className="mt-5 text-gray-500">
-                <Link href="tel: +213698966328">06 98 96 63 28</Link>
+                <Link href="tel: +213698966328">
+                  06&nbsp;98&nbsp;96&nbsp;63&nbsp;28
+                </Link>
               </p>
             </div>
           </div>
@@ -100,7 +117,7 @@ const Footer = ({}) => {
                 type="name"
                 name="name"
                 id="name"
-                placeholder="Name"
+                placeholder={t("Name")}
                 className=" w-full outline-none focus:border-yellow-500 duration-200 border-2 rounded p-2 h-full text-gray-500"
               />
             </div>
@@ -109,7 +126,7 @@ const Footer = ({}) => {
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Email Address"
+                placeholder={t("Email")}
                 className=" w-full outline-none focus:border-yellow-500 duration-200 border-2 rounded p-2 h-full text-gray-500"
               />
             </div>
@@ -125,7 +142,7 @@ const Footer = ({}) => {
                 className="inline-block absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 text-center "
               >
                 <FaGlobe className="text-center mx-auto mb-1 text-yellow-500" />
-                <span className="text-gray-500">Website</span>
+                <span className="text-gray-500"> {t("Websites")}</span>
               </label>
             </div>
             <div className="relative">
@@ -140,7 +157,7 @@ const Footer = ({}) => {
                 className="inline-block absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 text-center "
               >
                 <FaRegLightbulb className="text-center mx-auto mb-1 text-yellow-500" />
-                <span className="text-gray-500">Branding</span>
+                <span className="text-gray-500"> {t("Branding")}</span>
               </label>
             </div>
             <div className="relative">
@@ -155,7 +172,7 @@ const Footer = ({}) => {
                 className="inline-block absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 text-center "
               >
                 <RiSmartphoneLine className="text-center mx-auto mb-1 text-yellow-500" />
-                <span className="text-gray-500">Ecommerce</span>
+                <span className="text-gray-500"> {t("Ecommerce")}</span>
               </label>
             </div>
             <div className="relative">
@@ -170,7 +187,7 @@ const Footer = ({}) => {
                 className="inline-block absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 text-center "
               >
                 <FaGoogle className="text-center mx-auto mb-1 text-yellow-500" />
-                <span className="text-gray-500">SEO</span>
+                <span className="text-gray-500"> {t("SEO")}</span>
               </label>
             </div>
             <div className="col-span-2 lg:col-span-4 ">
@@ -178,7 +195,7 @@ const Footer = ({}) => {
                 type="tellme"
                 name="tellme"
                 id="tellme"
-                placeholder="tell me about the project"
+                placeholder={t("tell me about the project")}
                 className=" w-full outline-none focus:border-yellow-500 duration-200 border-2 rounded p-3 h-full text-gray-500 overflow-y-auto"
               ></textarea>
             </div>
@@ -194,8 +211,11 @@ const Footer = ({}) => {
             </div>
           </div>
         </div>
-        <h3 className="text-center absolute bottom-0  left-0 right-0">
-          Copyright © 2024 K.M Company. All rights reserved.
+        <h3
+          className="text-center absolute bottom-0  left-0 right-0 text-sm text-gray-500"
+          style={{ direction: "ltr" }}
+        >
+          Copyright © 2024 K.M Company. All rights reserved
         </h3>
       </div>
     </section>

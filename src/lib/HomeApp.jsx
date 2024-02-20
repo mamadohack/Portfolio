@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import imgPerson from "../../public/1000.jpg";
+import happyman from "../../public/portrait-happy-excited-man-holding-laptop-computer.png";
 import { useTranslations } from "next-intl";
 
 
 
-const HomeApp = ({params}) => {
+const HomeApp = ({}) => {
   const t = useTranslations("Homepage");
   return (
     <section
@@ -13,7 +14,7 @@ const HomeApp = ({params}) => {
       id="home"
       style={{ backgroundColor: "#ebd400" }}
     >
-      <div className="container">
+      <div className="container px-5 lg:px-0">
         <div className="flex flex-wrap">
           <div className="w-full lg:w-7/12 mb-40">
             <div className="relative lg:top-32 -top-[70px]  z-20">
@@ -58,13 +59,14 @@ const HomeApp = ({params}) => {
             </div>
           </div>
           <div className="w-full lg:w-5/12 z-20 relative">
-            <div className="w-[350px] h-[350px] bg-white rounded-full absolute -top-40 lg:top-0 left-0 right-0 mx-auto"></div>
-            <div className="absolute -top-24 lg:top-0">
+            <div className="w-[350px] h-[350px] bg-white rounded-full absolute -top-40 lg:top-0 left-0 right-0 mx-auto -z-20 "></div>
+            <div className="absolute -top-24 lg:top-0 rtl:scale-x-[-1]">
               <Image
-                src="/portrait-happy-excited-man-holding-laptop-computer.png"
-                alt="okey"
+                src={happyman}
+                alt="ok1ey"
                 width={720}
                 height={480}
+                priority
               ></Image>
             </div>
           </div>

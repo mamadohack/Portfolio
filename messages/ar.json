@@ -2,6 +2,50 @@
   "Homepage": {
     "title": "مرحبا صديقي !",
     "title-discription": "انا متاح من اجل تحويل تصميمك  الى حقيقة.",
-    "title-button":"لنبدأ "
+    "title-button": "لنبدأ "
+  },
+  "Navbar": {
+    "First": "معرض أعمالي",
+    "Home": "الرئيسية",
+    "About": "حول",
+    "Services": "الخدمات",
+    "Pricing": "الاسعار",
+    "Contact": "اتصل بنا"
+  },
+  "About": {
+    "My Story": "قصتي",
+    "def": "كرمادي محمد هو مطور برمجيات مختص في الواجهات الامامية للمواقع من الجزائر,يستمتع بتصميم وانشاء تصاميم جذابة وذات طابع عصري  ...",
+    "Information": "معلومات عامة",
+    "Name": "الاسم",
+    "Birthday": "تاريخ الميلاد",
+    "Phone": "رقم الهاتف",
+    "Email": "الايميل",
+    "Years of Experiences": "سنوات الخبرة",
+    "Happy Customers": "الزبائن السعداء",
+    "Project Finished": "المشاريع المنتهية",
+    "Digital Awards": "الجوائز الرقمية",
+    "Kermadi Mohammed": "كرمادي محمد",
+    "March 30, 1998": "30 مارس 1998"
+  },
+  "Projects": {
+    "Projects": "المشاريع",
+    "BRANDING": "شعار",
+    "PHOTOGRAPHY": "التصوير الفوتوغرافي",
+    "WEBSITE": "موقع الكتروني"
+  },
+  "Footer":{
+    "Name": "الاسم",
+    "Email": "الايميل",
+    "SERVICES": "الخدمات",
+    "Websites": "مواقع الكترونية",
+    "Branding": "براندات",
+    "Ecommerce": "تجارة الكترونية",
+    "SEO": "تحسين البحث",
+    "STAY CONNECTED": "ابقى متصل",
+    "START A PROJECT": "ابدأ مشروعك",
+    "I’m available for freelance projects": "انا جاهز للعمل معك .",
+    "EMAIL": "ايميل",
+    "CALL": "اتصال",
+    "tell me about the project": "اشرح لي عن مشروعك ..."
   }
 }

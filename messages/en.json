@@ -1,3 +1,52 @@
 {
-  "Homepage": { "title": "Hello Friend !", "title-discription": "I’m available for freelance work.","title-button":"Let's Begin" }
+  "Homepage": {
+    "title": "Hello Friend !",
+    "title-discription": "I’m available for freelance work.",
+    "title-button": "Let's Begin"
+  },
+  "Navbar":{
+
+    "First":"Portfolio",
+    "Home":"Home",
+    "About":"About",
+    "Services":"Services",
+    "Pricing":"Pricing",
+    "Contact":"Contact"
+  }
+  ,"About":{
+    "My Story":"My Story",
+    "def":"Kermadi Mohammed is a front-end developer from Algeria. He enjoys working on challenging design and front-end development projects, writes extensively on CSS, Accessibility, RTL (right to left) text styling, and Defensive CSS.",
+    "Information":"Information",
+    "Name":"Name",
+    "Birthday":"Birthday",
+    "Phone":"Phone",
+    "Email":"Email",
+    "Years of Experiences":"Years of Experiences",
+    "Happy Customers":"Happy Customers",
+    "Project Finished":"Project Finished",
+    "Digital Awards":"Digital Awards",
+    "Kermadi Mohammed":"Kermadi Mohammed",
+    "March 30, 1998":"March 30, 1998"    
+  },
+  "Projects":{
+    "Projects":"Projects",
+    "BRANDING":"BRANDING",
+    "PHOTOGRAPHY":"PHOTOGRAPHY",
+    "WEBSITE":"WEBSITE"
+  }
+  ,"Footer":{
+    "Name": "Name",
+    "Email": "Email",
+    "SERVICES": "SERVICES",
+    "Websites": "Websites",
+    "Branding": "Branding",
+    "Ecommerce": "Ecommerce",
+    "SEO": "SEO",
+    "STAY CONNECTED": "STAY CONNECTED",
+    "START A PROJECT": "START A PROJECT",
+    "I’m available for freelance projects": "I’m available for freelance projects",
+    "EMAIL": "EMAIL",
+    "CALL": "CALL",
+    "tell me about the project":"tell me about the project"
+  }
 }

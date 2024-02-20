@@ -2,23 +2,21 @@ import Image from "next/image";
 import img1 from "../../public/couple-working-from-home-together-sofa.jpg";
 import Link from "next/link";
 import imgPerson from "../../public/1000.jpg";
-import { useTranslations,useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Lalezar } from "next/font/google";
 
-const lalezar = Lalezar({ subsets: ["arabic"],weight:["400"] })
+const lalezar = Lalezar({ subsets: ["arabic"], weight: ["400"] });
 
 const About = ({}) => {
-    const local = useLocale();
-    console.log(local)
-
+  const t = useTranslations("About");
   return (
     <>
       <section
-        className="min-h-screen flex justify-center items-center py-[70px]"
+        className="min-h-[80vh] flex justify-center items-center py-[70px] lg:py-0 border-b-2"
         id="about"
       >
-        <div className="container mx-auto lg:px-10">
-          <div className="flex flex-wrap px-8">
+        <div className="container mx-auto lg:px-10" >
+          <div className="flex flex-wrap px-8 lg:px-0">
             <div className="w-full lg:w-1/2 ">
               {/* <Image
                 src={imgPerson}
@@ -35,18 +33,18 @@ const About = ({}) => {
                 className="block rounded-[20px] w-full h-auto"
               ></Image>
             </div>
-            <div className="w-full lg:w-1/2 mt-8 lg:mt-0 pl-0 lg:pl-10 font-sans lg:rtl:pr-10 lg:rtl:pl-0">
+            <div className="w-full lg:w-1/2 mt-8 lg:mt-0 pl-0 lg:pl-10  lg:rtl:pr-10 lg:rtl:pl-0">
               <div>
-                <div className="flex items-center bg-[#ebd400] justify-end xl:justify-between gap-5 rounded-[15px] font-sans">
-                  <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white ml-10 font-bold lg:max-w-min max-w-max">
-                    My Story
+                <div className="flex items-center bg-[#ebd400] justify-end xl:justify-between gap-5 rounded-[15px] py-2">
+                  <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white ms-10 font-bold lg:max-w-min max-w-max rtl:text-5xl ">
+                    {t("My Story")}
                   </h2>
                   <Image
                     alt="image"
                     src={imgPerson}
                     width={160}
                     height={160}
-                    className="rounded-full block h-[160px] object-cover  mr-10"
+                    className="rounded-full block h-[160px] object-cover  me-10"
                   ></Image>
                   {/* <Image
                     alt="image"
@@ -58,22 +56,9 @@ const About = ({}) => {
                 </div>
 
                 <div>
-                  <h2
-                    className={`my-5 text-2xl font-bold font-sans ${
-                      local === "ar" && lalezar.className
-                    } ${local === "ar" && "text-right"} `}
-                  ></h2>
-                  <p className="text-[#717275] text-lg/6 text-pretty ">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-                    nostrum, voluptatum corporis hic exercitationem cupiditate
-                    quia et enim corrupti blanditiis, beatae aperiam iure magni
-                    at saepe, cum ex suscipit mollitia.
-                  </p>
-                  <p className="text-[#717275] text-lg/6 mt-5 text-pretty">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Sapiente, quisquam dolores. Voluptatem animi cupiditate
-                    ipsum laborum aperiam totam fugiat rem sit omnis tempora,
-                    est quasi magnam corporis molestias delectus veniam 2020!
+                  <h2 className={"my-5 text-2xl font-bold"}></h2>
+                  <p className="text-[#717275] text-lg text-balanced leading-10 rtl:text-2xl rtl:leading-[3rem]">
+                    {t("def")}
                   </p>
                 </div>
               </div>
@@ -81,71 +66,73 @@ const About = ({}) => {
           </div>
         </div>
       </section>
-      <section className="min-h-screen flex justify-center items-center mb-20">
-        <div className="container">
-          <div className="flex flex-wrap px-2 lg:px-14 font-sans">
+      <section className="min-h-[80vh] flex justify-center items-center py-[70px] lg:py-0 border-b-2">
+        <div className="container px-5">
+          <div className="flex flex-wrap px-2 lg:px-14 ">
             <div className="w-full lg:w-1/2 border-2  rounded-[15px]">
-              <h3 className="font-sans sm:text-3xl text-xl font-bold border-b-2 md:p-5 p-3">
-                Information
+              <h3 className=" sm:text-3xl text-xl font-bold border-b-2 md:p-5 p-3 rtl:text-4xl">
+                {t("Information")}
               </h3>
               <p>
-                <span className="min-w-[140px] p-3 selection:bg-black text-xl font-semibold text-[#ebd400] inline-block border-r-2">
-                  Name
+                <span className="min-w-[140px] p-3 selection:bg-black text-xl font-semibold text-[#ebd400] inline-block border-e-2 rtl:text-2xl">
+                  {t("Name")}
                 </span>
-                <span className="ml-5 sm:text-xl text-[#717275]">
-                  Kermadi Mohammed
-                </span>
-              </p>
-              <p>
-                <span className="min-w-[140px] p-3  text-xl font-semibold text-[#ebd400] inline-block border-r-2">
-                  Birthday
-                </span>
-                <span className="ml-5 sm:text-xl text-[#717275]">
-                  March 30, 1998
+                <span className="ms-5 sm:text-xl text-[#717275] rtl:text-2xl">
+                  {t("Kermadi Mohammed")}
                 </span>
               </p>
               <p>
-                <span className="min-w-[140px] p-3  text-xl font-semibold text-[#ebd400] inline-block border-r-2">
-                  Phone
+                <span className="min-w-[140px] p-3  text-xl font-semibold text-[#ebd400] inline-block border-e-2 rtl:text-2xl">
+                  {t("Birthday")}{" "}
                 </span>
-                <span className="ml-5 sm:text-xl text-[#717275]">
-                  <Link href="tel: +213698966328">06 98 96 63 28</Link>
+                <span className="ms-5 sm:text-xl text-[#717275] rtl:text-2xl">
+                  {t("March 30, 1998")}
                 </span>
               </p>
               <p>
-                <span className="min-w-[140px] p-3 text-xl font-semibold text-[#ebd400] inline-block border-r-2">
-                  Email
+                <span className="min-w-[140px] p-3  text-xl font-semibold text-[#ebd400] inline-block border-e-2 rtl:text-2xl">
+                  {t("Phone")}{" "}
                 </span>
-                <span className="ml-5 sm:text-xl text-[#717275]">
+                <span className="ms-5 sm:text-xl text-[#717275] rtl:text-2xl">
+                  <Link href="tel: +213698966328">
+                    06&nbsp;98&nbsp;96&nbsp;63&nbsp;28
+                  </Link>
+                </span>
+              </p>
+              <p>
+                <span className="min-w-[140px] p-3 text-xl font-semibold text-[#ebd400] inline-block border-e-2 rtl:text-2xl">
+                  {t("Email")}{" "}
+                </span>
+                <span className="ms-5 sm:text-xl text-[#717275] rtl:text-2xl">
                   <Link href="mailto:kermadimohamed7@gmail.com">
                     kermadimohamed7
                   </Link>
                 </span>
               </p>
             </div>
-            <div className="w-full lg:w-1/2 flex flex-wrap lg:mt-5 mt-10 lg:pl-10">
-              <div className="w-1/2  border-b-2 border-r-2">
-                <h2 className="text-6xl font-bold p-2 font-sans">20+</h2>
-                <p className="text-[#ebd400] p-2 text-xl ">
-                  Years of Experiences
+            <div className="w-full lg:w-1/2 flex flex-wrap lg:mt-5 mt-10 lg:ps-10 ">
+              <div className="w-1/2  border-b-2 border-e-2">
+                <h2 className="text-6xl font-bold p-2 ">1+</h2>
+                <p className="text-[#ebd400] p-2 text-xl rtl:text-2xl">
+                  {t("Years of Experiences")}
                 </p>
               </div>
-              <div className="w-1/2  border-b-2 pl-5">
-                <h2 className="text-6xl font-bold p-2 ">245</h2>
-                <p className="text-[#ebd400] p-2 text-xl font-sans">
-                  Happy Customers
+              <div className="w-1/2  border-b-2 ps-5">
+                <h2 className="text-6xl font-bold p-2 ">3</h2>
+                <p className="text-[#ebd400] p-2 text-xl rtl:text-2xl">
+                  {t("Happy Customers")}
                 </p>
               </div>
-              <div className="w-1/2  border-r-2">
-                <h2 className="text-6xl font-bold p-2">640</h2>
-                <p className="text-[#ebd400] p-2 text-xl font-sans">
-                  Project Finished
+              <div className="w-1/2  border-e-2">
+                <h2 className="text-6xl font-bold p-2">5</h2>
+                <p className="text-[#ebd400] p-2 text-xl rtl:text-2xl">
+                  {t("Project Finished")}
                 </p>
               </div>
               <div className="w-1/2 pl-5">
-                <h2 className="text-6xl font-bold p-2">72+</h2>
-                <p className="text-[#ebd400] p-2 text-xl font-sans">
-                  Digital Awards
+                <h2 className="text-6xl font-bold p-2">5+</h2>
+                <p className="text-[#ebd400] p-2 text-xl rtl:text-2xl">
+                  {t("Digital Awards")}
                 </p>
               </div>
             </div>

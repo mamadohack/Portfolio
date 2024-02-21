@@ -2,7 +2,7 @@ import HomeApp from "@/lib/HomeApp";
 import Nav from "@/lib/Nav";
 import About from "@/lib/About";
 import Projects from "@/lib/Projects";
-import Footer from "@/lib/Footer"
+import Foo from "@/lib/Foo"
 export default function Home({params}) {
 
   return (
@@ -11,7 +11,7 @@ export default function Home({params}) {
       <HomeApp params={params.locale}></HomeApp>
       <About></About>
       <Projects></Projects>
-      <Footer></Footer>
+      <Foo></Foo>
     </div>
   );
 }

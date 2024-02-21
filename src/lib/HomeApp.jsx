@@ -52,7 +52,7 @@ const HomeApp = ({}) => {
                 {t("title-discription")}
               </h3>
               <Link href="#" className="">
-                <h3 className="px-5 py-3 rounded-full cursor-pointer text-white max-w-max	font-semibold x text-2xl rtl:text-3xl">
+                <h3 className="px-5 py-3 rounded-full cursor-pointer text-white max-w-max	font-semibold x text-xl rtl:text-3xl">
                   {t("title-button")}
                 </h3>
               </Link>

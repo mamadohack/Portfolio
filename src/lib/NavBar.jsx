@@ -105,7 +105,7 @@ const NavBar = ({}) => {
                 <Link
                   href="#home"
                   locale="ar"
-                  className="block py-2 px-3 rounded md:bg-transparent md:p-0 hover:text-gray-400 rtl:text-2xl"
+                  className="block py-2 px-3 rounded md:bg-transparent md:p-0 hover:text-gray-400 rtl:text-2xl text-xl"
                   aria-current="page"
                 >
                   {t("Home")}
@@ -114,7 +114,7 @@ const NavBar = ({}) => {
               <li>
                 <a
                   href="#about"
-                  className="block py-2 px-3 rounded md:border-0  md:p-0 hover:text-gray-400 rtl:text-2xl"
+                  className="block py-2 px-3 rounded md:border-0  md:p-0 hover:text-gray-400 rtl:text-2xl text-xl"
                 >
                   {t("About")}
                 </a>
@@ -122,7 +122,7 @@ const NavBar = ({}) => {
               <li>
                 <a
                   href="#Projects"
-                  className="block py-2 px-3 rounded md:border-0 md:p-0 hover:text-gray-400 rtl:text-2xl"
+                  className="block py-2 px-3 rounded md:border-0 md:p-0 hover:text-gray-400 rtl:text-2xl text-xl"
                 >
                   {t("Projects")}
                 </a>
@@ -130,7 +130,7 @@ const NavBar = ({}) => {
               <li>
                 <a
                   href="#Footer"
-                  className="block py-2 px-3 rounded md:border-0 md:p-0 hover:text-gray-400 rtl:text-2xl"
+                  className="block py-2 px-3 rounded md:border-0 md:p-0 hover:text-gray-400 rtl:text-2xl text-xl"
                 >
                   {t("Contact")}
                 </a>

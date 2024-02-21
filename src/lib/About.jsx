@@ -38,7 +38,7 @@ const About = ({}) => {
             <div className="w-full lg:w-1/2 mt-8 lg:mt-0 pl-0 lg:pl-10  lg:rtl:pr-10 lg:rtl:pl-0">
               <div>
                 <div className="flex items-center bg-[#ebd400] justify-end xl:justify-between gap-5 rounded-[15px] py-2">
-                  <h2 className="text-xl md:text-4xl lg:text-5xl text-white ms-10 font-bold lg:max-w-min max-w-max rtl:text-5xl ">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl text-white ms-10 font-bold lg:max-w-min max-w-max rtl:text-5xl ">
                     {t("My Story")}
                   </h2>
                   <Image

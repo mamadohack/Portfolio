@@ -24,7 +24,7 @@ const Projects = ({}) => {
             ></Image>
           </div>
           <h2
-            className={`sm:text-3xl font-bold text-white text-xl rtl:text-3xl`}
+            className={`text-3xl font-bold text-white rtl:text-3xl`}
           >
             {t("Projects")}
           </h2>

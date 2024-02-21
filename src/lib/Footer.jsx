@@ -98,7 +98,7 @@ const Footer = ({}) => {
               </h3>
               <p className="mt-5 text-gray-500 rtl:text-xl">
                 <Link href="mailto:kermadimohamed7@gmail.com">
-                  kermadimohamed7@gmail
+                  kermadimohamed7
                 </Link>
               </p>
               <h3 className="font-semibold text-sm mt-10 rtl:text-3xl">

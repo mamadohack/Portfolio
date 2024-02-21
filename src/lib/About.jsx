@@ -4,6 +4,8 @@ import Link from "next/link";
 import imgPerson from "../../public/1000.jpg";
 import { useTranslations } from "next-intl";
 import { Lalezar } from "next/font/google";
+import { MdOutlineAlternateEmail } from "react-icons/md";
+
 
 const lalezar = Lalezar({ subsets: ["arabic"], weight: ["400"] });
 
@@ -15,7 +17,7 @@ const About = ({}) => {
         className="min-h-[80vh] flex justify-center items-center py-[70px] lg:py-0 border-b-2"
         id="about"
       >
-        <div className="container mx-auto lg:px-10" >
+        <div className="container mx-auto lg:px-10">
           <div className="flex flex-wrap px-8 lg:px-0">
             <div className="w-full lg:w-1/2 ">
               {/* <Image
@@ -36,7 +38,7 @@ const About = ({}) => {
             <div className="w-full lg:w-1/2 mt-8 lg:mt-0 pl-0 lg:pl-10  lg:rtl:pr-10 lg:rtl:pl-0">
               <div>
                 <div className="flex items-center bg-[#ebd400] justify-end xl:justify-between gap-5 rounded-[15px] py-2">
-                  <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white ms-10 font-bold lg:max-w-min max-w-max rtl:text-5xl ">
+                  <h2 className="text-xl md:text-4xl lg:text-5xl text-white ms-10 font-bold lg:max-w-min max-w-max rtl:text-5xl ">
                     {t("My Story")}
                   </h2>
                   <Image
@@ -99,13 +101,16 @@ const About = ({}) => {
                   </Link>
                 </span>
               </p>
-              <p>
+              <p className="flex items-center">
                 <span className="min-w-[140px] p-3 text-xl font-semibold text-[#ebd400] inline-block border-e-2 rtl:text-2xl">
                   {t("Email")}{" "}
                 </span>
                 <span className="ms-5 sm:text-xl text-[#717275] rtl:text-2xl">
-                  <Link href="mailto:kermadimohamed7@gmail.com">
-                    kermadimohamed7
+                  <Link
+                    href="mailto:kermadimohamed7@gmail.com"
+                    className="text-gray-700 inline-block rounded-full border-2 p-2 hover:border-gray-700 duration-200"
+                  >
+                    <MdOutlineAlternateEmail />
                   </Link>
                 </span>
               </p>

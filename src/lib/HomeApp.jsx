@@ -35,7 +35,7 @@ const HomeApp = ({}) => {
                 ></Image> */}
                 </div>
                 <h3
-                  className=" font-bold ml-5 bg-white px-3 py-1 rounded-full md:text-3xl text-2xl  lalezar-regular"
+                  className=" font-bold ms-5 bg-white px-3 py-1 rounded-full text-3xl rtl:text-3xl "
                   style={{
                     color: "#212529",
                   }}
@@ -44,7 +44,7 @@ const HomeApp = ({}) => {
                 </h3>
               </div>
               <h3
-                className="bg-white px-5 md:py-2 py-1 rounded-full font-bold mb-4 max-w-max md:text-4xl text-2xl"
+                className="bg-white px-5 md:py-2 py-1 rounded-full font-bold mb-4 max-w-max md:text-4xl text-3xl rtl:text-3xl"
                 style={{
                   color: "#FEE715",
                 }}
@@ -52,7 +52,7 @@ const HomeApp = ({}) => {
                 {t("title-discription")}
               </h3>
               <Link href="#" className="">
-                <h3 className="px-5 py-3 rounded-full cursor-pointer text-white max-w-max	font-semibold x md:text-xl ">
+                <h3 className="px-5 py-3 rounded-full cursor-pointer text-white max-w-max	font-semibold x text-3xl rtl:text-3xl">
                   {t("title-button")}
                 </h3>
               </Link>

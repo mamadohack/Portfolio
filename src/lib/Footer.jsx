@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
@@ -8,11 +9,25 @@ import { FaRegLightbulb } from "react-icons/fa6";
 import { RiSmartphoneLine } from "react-icons/ri";
 import { FaGoogle } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import { useEffect, useRef, useState } from "react";
+import { FaArrowUp } from "react-icons/fa6";
 
 const Footer = ({}) => {
-    const t = useTranslations("Footer");
+  const ref = useRef("");
+  const ScrollFun = () => {window.scrollTo({ top: 0, behavior: "smooth" });}
+  const [showButtonScrollUp, setShowButtonScrollUp] = useState(false);
+  const t = useTranslations("Footer");
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (ref.current.getBoundingClientRect().top <= -0) {
+        setShowButtonScrollUp(true);
+      } else {
+        setShowButtonScrollUp(false);
+      }
+    });
+  }, [showButtonScrollUp]);
   return (
-    <section className="min-h-screen relative mb-2" id="Footer">
+    <section className="min-h-screen relative mb-2" id="Footer" ref={ref}>
       <div className="container mx-auto mt-10 px-8 lg:px-0">
         <div className="grid lg:grid-cols-8 grid-cols-2 md:gap-5 px-[30px] ">
           <div className="grid grid-cols-subgrid col-span-2 gap-2 lg:col-span-4 gap-5">
@@ -218,6 +233,14 @@ const Footer = ({}) => {
           Copyright © 2024 K.M Company. All rights reserved
         </h3>
       </div>
+      <button
+        className={`p-2 text-xl absolute bottom-10 left-3 sm:p-5 rounded-full border-2 border-gray-700 sm:text-2xl duration-1000 sm:duration-500 ${
+          showButtonScrollUp ? "opacity-1" : "opacity-0"
+        }`}
+        onClick={ScrollFun}
+      >
+        <FaArrowUp />
+      </button>
     </section>
   );
 };

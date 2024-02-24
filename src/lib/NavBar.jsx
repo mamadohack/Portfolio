@@ -2,34 +2,35 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { RiEnglishInput } from "react-icons/ri";
 
 // style={{ backgroundColor: "#ebd400" }}
 const NavBar = ({}) => {
   const t = useTranslations("Navbar");
+  const locale = useLocale();
   const [showNavbar, setShowNavbar] = useState(false);
   const sideNavRef = useRef(null);
   const [colorNavbar, setColorNavbar] = useState({
     colornavar: "#101820",
     textcolor: "white",
   });
-   useEffect(() => {
-     // Add event listener to the document object
-     document.addEventListener("mousedown", handleClickOutside);
-
-     // Remove event listener when the component unmounts
-     return () => {
-       document.removeEventListener("mousedown", handleClickOutside);
-     };
-   }, []);
-
-   function handleClickOutside(event) {
-     if (sideNavRef.current && !sideNavRef.current.contains(event.target)) {
-       setShowNavbar(false);
-     }
-   }
   useEffect(() => {
+    // Add event listener to the document object
+    document.addEventListener("mousedown", handleClickOutside);
 
+    // Remove event listener when the component unmounts
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  function handleClickOutside(event) {
+    if (sideNavRef.current && !sideNavRef.current.contains(event.target)) {
+      setShowNavbar(false);
+    }
+  }
+  useEffect(() => {
     window.addEventListener("scroll", () => {
       if (scrollY >= 50 && colorNavbar.colornavar === "#101820") {
         setColorNavbar({ colornavar: "#ebd400", textcolor: "#101820" }); //#ebd400
@@ -133,6 +134,14 @@ const NavBar = ({}) => {
                   className="block py-2 px-3 rounded md:border-0 md:p-0 hover:text-gray-400 rtl:text-2xl text-xl"
                 >
                   {t("Contact")}
+                </a>
+              </li>
+              <li className="after:start-3 md:after:start-0  after:bg-[--bottom-border-color] after:content-[''] after:w-[25px] after:h-[2px] after:absolute relative  md:after:-bottom-2 after:bottom-0">
+                <a
+                  href={locale === "en" ? "/ar" : "/en"}
+                  className="block  rounded-full hover:text-gray-400 rtl:text-2xl text-xl py-2 px-3 md:p-0 "
+                >
+                  {locale === "en" ? "AR" : "En"}
                 </a>
               </li>
             </ul>

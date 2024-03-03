@@ -3,7 +3,11 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
-import { RiEnglishInput } from "react-icons/ri";
+import ThemeSwitcher from "./ThemeSwitcher";
+import { BiWorld } from "react-icons/bi";
+
+
+
 
 // style={{ backgroundColor: "#ebd400" }}
 const NavBar = ({}) => {
@@ -12,8 +16,8 @@ const NavBar = ({}) => {
   const [showNavbar, setShowNavbar] = useState(false);
   const sideNavRef = useRef(null);
   const [colorNavbar, setColorNavbar] = useState({
-    colornavar: "#101820",
-    textcolor: "white",
+    colornavar: "var(--background)",
+    textcolor: "var(--text-color)",
   });
   useEffect(() => {
     // Add event listener to the document object
@@ -32,10 +36,16 @@ const NavBar = ({}) => {
   }
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (scrollY >= 50 && colorNavbar.colornavar === "#101820") {
-        setColorNavbar({ colornavar: "#ebd400", textcolor: "#101820" }); //#ebd400
+      if (scrollY >= 50 && colorNavbar.colornavar === "var(--background)") {
+        setColorNavbar({
+          colornavar: "#ebd400",
+          textcolor: "var(--text-color)",
+        }); //#ebd400
       } else if (scrollY < 50 && colorNavbar.colornavar === "#ebd400") {
-        setColorNavbar({ colornavar: "#101820", textcolor: "white" });
+        setColorNavbar({
+          colornavar: "var(--background)",
+          textcolor: "var(--text-color)",
+        });
       }
     });
   }, [colorNavbar]);
@@ -55,7 +65,7 @@ const NavBar = ({}) => {
         >
           <a
             href="#"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
+            className="flex items-center space-x-3 rtl:space-x-reverse "
           >
             {/* <img
               src="https://flowbite.com/docs/images/logo.svg"
@@ -69,7 +79,7 @@ const NavBar = ({}) => {
               height={32}
               alt="Flowbite Logo"
             /> */}
-            <span className="self-center text-4xl font-semibold whitespace-nowrap  tracking-widest">
+            <span className="self-center text-4xl font-semibold whitespace-nowrap tracking-widest">
               {t("First")}
             </span>
           </a>
@@ -101,7 +111,7 @@ const NavBar = ({}) => {
               showNavbar ? "block" : "hidden"
             } w-full md:block md:w-auto`}
           >
-            <ul className=" font-medium flex flex-col p-4 md:p-0 mt-4  border-t-0 border-white rounded-b-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
+            <ul className=" font-medium flex flex-col p-4 md:p-0 mt-4  border-t-0 border-white rounded-b-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:items-center">
               <li>
                 <Link
                   href="#home"
@@ -139,10 +149,14 @@ const NavBar = ({}) => {
               <li className="after:start-3 md:after:start-0  after:bg-[--bottom-border-color] after:content-[''] after:w-[25px] after:h-[2px] after:absolute relative  md:after:-bottom-2 after:bottom-0">
                 <a
                   href={locale === "en" ? "/ar" : "/en"}
-                  className="block  rounded-full hover:text-gray-400 rtl:text-2xl text-xl py-2 px-3 md:p-0 "
+                  className="block rounded-full hover:text-gray-400 py-2 px-3 md:p-0 text-[25px]"
                 >
-                  {locale === "en" ? "AR" : "En"}
+                  {/* {locale === "en" ? "LNG : AR" : "لغة : الانجليزية"} */}
+                  <BiWorld/>
                 </a>
+              </li>
+              <li className="after:start-3 md:after:start-0  after:bg-[--bottom-border-color] after:content-[''] after:w-[25px] after:h-[2px] after:absolute relative  md:after:-bottom-2 after:bottom-0 "style={{marginInlineStart:"1rem"}}>
+                <ThemeSwitcher />
               </li>
             </ul>
           </div>

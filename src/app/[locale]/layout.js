@@ -2,11 +2,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Lalezar } from "next/font/google";
 import { Roboto } from "next/font/google";
+import ThemeP from "@/lib/ThemeP";
 
 
-export const lalezar = Lalezar({ subsets: ["arabic"],weight:["400"] })
+export const lalezar = Lalezar({ subsets: ["arabic"], weight: ["400"] })
 const inter = Inter({ subsets: ["latin"] });
-const roboto = Roboto({ subsets: ["latin"],weight:["100","300","400","500","700","900"] })
+const roboto = Roboto({ subsets: ["latin"], weight: ["100", "300", "400", "500", "700", "900"] })
 
 export const metadata = {
   title: "Create Next App",
@@ -18,7 +19,10 @@ export default function RootLayout({ children, params }) {
   return (
     <html lang={params.locale}>
       <body dir={lango}>
-        {children}</body>
+        <ThemeP>
+          {children}
+        </ThemeP>
+        </body>
     </html>
   );
 }

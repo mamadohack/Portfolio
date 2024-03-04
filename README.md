@@ -1,3 +1,8 @@
+## Live App 
+[Here](https://portfolio-git-main-mamadohacks-projects.vercel.app/)
+## ScreenShots
+![Alt text](screencapture-2.png?raw=true "screenshot2")
+![Alt text](screencapture-1.png?raw=true "screenshot1")
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
